@@ -1,17 +1,8 @@
 "use strict";
 
-const _ = require('lodash');
 const ReactUMGClassMap = require('./ReactUMGClassMap');
 const ClassMap = JavascriptLibrary.GetDerivedClasses(Widget, [], true)
-const {set_attrs, set_attr} = require('./set_attrs');
-
-const mappingTable = {
-  'VerticalBox': 'div',
-  'HorizontalBox': 'span',
-  'TextBlock': 'text',
-  'Image': 'img',
-  'EditableText': 'input'
-}
+const { set_attrs, set_attr } = require('./set_attrs');
 
 function registerComponent(key, cls) {
   class klass {
@@ -33,11 +24,9 @@ function registerComponent(key, cls) {
 }
 
 ClassMap.Results.forEach(cls => {
-  const key = _.first(_.last(JavascriptLibrary.GetClassPathName(cls).split('.')).split('_'));
-  if (mappingTable[key]) {
-    registerComponent(mappingTable[key], cls)
-  }
-  registerComponent('u' + key, cls)
+  const [last] = JavascriptLibrary.GetClassPathName(cls).split('.').reverse();
+  const [key] = last.split('_');
+  registerComponent('U' + key, cls)
 })
 
 module.exports = {

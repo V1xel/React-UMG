@@ -1,17 +1,17 @@
 {
   "name": "react-umg",
   "version": "0.2.5",
-  "description": "A React renderer for Unreal Motion Graphics With Unreal.js",
+  "description": "Fork of ncsoft react-umg",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ncsoft/React-UMG.git"
+    "url": "https://github.com/V1xel/React-UMG.git"
   },
   "bugs": {
-    "url": "https://github.com/ncsoft/React-UMG/issues"
+    "url": "https://github.com/V1xel/React-UMG/issues"
   },
   "keywords": [
     "unreal.js",
@@ -20,14 +20,12 @@
     "umg"
   ],
   "author": {
-    "name": "NCSOFT",
-    "email": "crocuis@ncsoft.com",
-    "url": "http://ncsoft.com"
+    "name": "V1xel",
+    "email": "v1xel@hotmail.com"
   },
   "license": "MIT",
   "dependencies": {
     "fbjs": "^0.8.3",
-    "lodash": "^4.17.4",
     "react": "<=15.4.2",
     "react-dom": "<=15.4.2"
   }
